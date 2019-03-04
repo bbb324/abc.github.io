@@ -1,4 +1,5 @@
 $(function () {
+  console.log(12312)
   $('#fullpage').fullpage({
     afterLoad: function (anchorLink, index) {
       switch (index) {
