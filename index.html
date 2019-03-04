@@ -5,230 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
-    <script type="text/javascript" src="js/autofill.js"></script>
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-<div id="fullpage">
-    <audio class="audio" autoplay="true" loop="loop" src="audio/1.Mp3"></audio>
-    <div class="section">
-        <div class="head"></div>
-        <div class="p1">
-            <img class="music" src="image/music.png">
-            <img class="word" src="image/p1_word.png">
-            <img class="scroll" src="image/scroll.png">
-        </div>
-    </div>
-    <div class="section">
-        <div class="head"></div>
-        <div class="p2">
-            <img class="music" src="image/music.png">
-            <img class="p2_word" src="image/p2_word.png">
-            <img class="scroll" src="image/scroll.png">
-            <img class="portrait" src="image/portrait.png">
-            <div class="lineDiv">
-              <img class="line" src="image/line.png">
-              <img class="line brightP3" src="image/bright_line.png">
-              <img class="square SP2" src="image/square.png">
-            </div>
-        </div>
-    </div>
-    <div class="section">
-        <div class="head"></div>
-        <div class="p3">
-            <img class="music" src="image/music.png">
-            <img class="p3_1" src="image/p3_1.png">
-            <div class="p3_2">
-                <div class='p3_2_bg'>
-                    <div id='p3_2' class="p3_2_txt">
-                       <div class="dialog-speak-manager">
-                            <span>Gavin:</span><br />
-                            <span id="p3_2_speak"></span>
-                       </div>
-                    </div>
-                    <img class="manager" src="image/mang.png">
-                </div>
-            </div>
-            <div class="p3_3">
-                <div class='p3_3_bg'>
-                    <img class="avator-fd" src="image/avatar-fd.png">
-                    <div id='p3_3' class="p3_3_txt">
-                        <div class="dialog-speak-manager">
-                            <span>林先生:</span><br />
-                            <span id="p3_3_speak"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="p3_4">
-                <div class='p3_4_bg'>
-                    <div id='p3_4' class="p3_4_txt">
-                        <div class="dialog-speak-manager">
-                            <span>Gavin:</span><br />
-                            <span id="p3_4_speak"></span>
-                        </div>
-                    </div>
-                    <img class="manager" src="image/mang.png">
-                </div>
-            </div>
-            <img class="p3_5" src="image/p3_5.png">
-            <img class="p3_6" src="image/p3_6.png">
-            <img class="scroll" src="image/scroll.png">
-            <img class="portrait" src="image/portrait.png">
-            <div class="lineDiv">
-                <img class="line" src="image/line.png">
-                <img class="line brightP3" src="image/bright_line.png">
-                <img class="square SP3" src="image/square.png">
-            </div>
-        </div>
-        <div class="p4">
-            <img class="p4_exit" src="image/p4_exit.png">
-            <img class="p4_1" src="image/p4_1.png">
-        </div>
-    </div>
-    <div class="section">
-        <div class="head"></div>
-        <div class="p5">
-            <img class="p5_bg1" src="image/p5_bg1.png">
-            <img class="p5_bg2" src="image/p5_bg2.png">
-            <img class="music" src="image/music.png">
-            <img class="p5_1" src="image/p5_1.png">
-            <img class="p5_2" src="image/p5_2.png">
-            <img class="scroll" src="image/scroll.png">
-            <img class="portrait" src="image/portrait.png">
-          <div class="lineDiv">
-            <img class="line" src="image/line.png">
-            <img class="line brightP5" src="image/bright_line.png">
-            <img class="square SP5" src="image/square.png">
-          </div>
-        </div>
-    </div>
-    <div class="section">
-        <div class="head"></div>
-        <div class="p6">
-            <img class="p6_bg1" src="image/p6_bg1.png">
-            <img class="p6_bg2" src="image/p6_bg2.png">
-            <img class="music" src="image/music.png">
-            <img class="p6_1" src="image/p6_1.png">
-            <img class="p6_2" src="image/p6_2.png">
-            <img class="scroll" src="image/scroll.png">
-            <img class="portrait" src="image/portrait.png">
-          <div class="lineDiv">
-            <img class="line" src="image/line.png">
-            <img class="line brightP6" src="image/bright_line.png">
-            <img class="square SP6" src="image/square.png">
-          </div>
-            <img class="p6_3" src="image/p6_3.png">
-        </div>
-    </div>
-    <div class="section">
-        <div class="head"></div>
-        <div class="p7">
-            <img class="p7_bg1" src="image/p7_bg1.png">
-            <img class="p7_bg2" src="image/p7_bg2.png">
-            <img class="music" src="image/music.png">
-            <img class="p7_1" src="image/p7_1.png">
-            <div class="p7_2">
-                <div class='p7_2_bg'>
-                    <div id='p7_2' class="p7_2_txt">
-                       <div class="dialog-speak-manager">
-                            <span>Julie:</span><br />
-                            <span id="p7_2_speak"></span>
-                       </div>
-                    </div>
-                    <img class="manager" src="image/p7_mang.png">
-                </div>
-            </div>
-            <div class="p7_3">
-                <div class='p7_3_bg'>
-                    <img class="avator-fd" src="image/p7_avatar-fd.png">
-                    <div id='p7_3' class="p7_3_txt">
-                        <div class="dialog-speak-manager">
-                            <span>林先生:</span><br />
-                            <span id="p7_3_speak"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="p7_4">
-                <div class='p7_4_bg'>
-                    <div id='p7_4' class="p7_4_txt">
-                        <div class="dialog-speak-manager">
-                            <span>Julie:</span><br />
-                            <span id="p7_4_speak"></span>
-                        </div>
-                    </div>
-                    <img class="manager" src="image/p7_mang.png">
-                </div>
-            </div>
+<div>
+    <h1>留下你的 10 块钱，也留下你的痔疮</h1>
+    <p>
+        养成良好的生活习惯
 
-            <img class="scroll" src="image/scroll.png">
-            <img class="portrait" src="image/portrait.png">
-          <div class="lineDiv">
-            <img class="line" src="image/line.png">
-            <img class="line brightP7" src="image/bright_line.png">
-            <img class="square SP7" src="image/square.png">
-          </div>
-        </div>
-    </div>
-    <div class="section">
-        <div class="head"></div>
-        <div class="p8">
-            <img class="p8_bg1" src="image/p8_bg1.png">
-            <img class="p8_bg2" src="image/p8_bg2.png">
-            <img class="music" src="image/music.png">
-            <img class="p8_1" src="image/p8_1.png">
-            <img class="p8_2" src="image/p8_2.png">
-            <img class="scroll" src="image/scroll.png">
-            <img class="portrait" src="image/portrait.png">
-          <div class="lineDiv">
-            <img class="line" src="image/line.png">
-            <img class="line brightP8" src="image/bright_line.png">
-            <img class="square SP8" src="image/square.png">
-          </div>
-            <img class="p8_3" src="image/p8_3.png">
-        </div>    </div>
-    <div class="section">
-        <div class="head"></div>
-        <div class="p9">
-            <img class="music" src="image/music.png">
-            <img class="p9_1" src="image/p9_1.png">
-            <img class="p9_2" src="image/p9_2.png">
-            <img class="scroll" src="image/scroll.png">
-            <img class="portrait" src="image/portrait.png">
-          <div class="lineDiv">
-            <img class="line" src="image/line.png">
-            <img class="line brightP9" src="image/bright_line.png">
-            <img class="square SP9" src="image/square.png">
-          </div>
-            <img class="p9_3" src="image/p9_3.png">
-        </div>
-    </div>
-    <div class="section">
-        <div class="head"></div>
-        <div class="p10">
-            <img class="music" src="image/music.png">
-            <img class="p10_1" src="image/p10_1.png">
-            <img class="scroll" src="image/scroll.png">
-        </div>
-    </div>
-    <div class="section">
-        <div class="head"></div>
-        <div class="p11">
-            <img class="music" src="image/music.png">
-            <img class="p11_1" src="image/p10_2.png">
-            <img class="scroll" src="image/scroll.png">
-        </div>
-    </div>
+        良好的生活习惯养成每天定时排便的良好习惯，选择时间要相对固定。排便时不能看书或看报，每次的排便时间不能太长，每日清洗肛门一次。
+
+        饮食要清淡
+
+        饮食有讲究平时应以蔬菜、水果和粗粮等清淡高纤维的食物为主。每天多喝水，尤其睡觉前与晨起必须饮一大杯水。
+
+        养成定时排便的习惯。
+
+        健康人直肠内通常没有粪便，随晨起起床引起的直立反射，早餐引起的胃、结肠反射，结肠可产生强烈的“集团蠕动”，将粪便推入直肠，直肠内粪便蓄积到一定量，便产生便意。
+
+        所以最好能养成每天早晨定时排便的习惯，这对于预防痔疮的发生，有着极重要的作用。有人认为晨起喝1杯凉开水能刺激胃肠运动，预防便秘。
+
+        坚持坐浴睡前或便后坐浴
+
+        坚持坐浴睡前或便后坐浴，同时进行提肛、放松的动作。肛门坐浴也可以缓解瘙痒，如果在水中溶解适量食盐会更好，坐浴后可用干而柔软的毛巾擦拭。
+
+        晨起运动防便秘
+
+        晨起参加多种体育活动,如跑步、做操、打太极拳等都可以预防便秘。当有便意时不要忍着不去大便，因为久忍大便可以引起习惯性便秘。排便时蹲厕时间过长，或看报纸、或过分用力，这些都是不良的排便习惯，应予纠正。
+
+        避免长时间的坐着不动
+
+        工作生活环境应避免长时间的坐着不动，以免增加腹压，每坐一小时左右，就应该站起来活动活动，但也不能长时间站立。平时要多参加体育活动，生活要有规律性。
+
+        可用药物调理
+
+        要药物调理，可以用朴硝，花椒以10:1的比例加开水冲泡熏洗。也可以每日大便后坚持用温水洗浴。如果没有什么效果，可以用联邦痔消，口服加外用抑制炎症感染，使受损的弹力纤维细胞得到全面修复，受损血管循环流畅，消炎，止血，消核同步进行，一步到位消除痔疮根源，不产生耐药性，避免病情反复难愈。
+
+        手术疗法
+
+        久治不愈或已形成较大的混合痔或花环痔者，应手术治疗。目的是摘除痔核或用缝扎等机械方法使之栓塞或萎陷。电凝或激光照射也很有效。外痔急性血栓形成,则需立即切开，取出血块,一般外痔多无需特殊治疗。
+
+
+        痔疮治疗方法小窍门
+
+        马生菜(马齿苋)加鸡蛋治痔疮
+
+        其方：马生菜尖49个，每个约2厘米长，洗净切碎，用锅煮。7只鸡蛋(要小鸡蛋，大了吃不下)，打好倒入煮马生菜的锅里，开锅3分钟即可，不放佐料。早晨空腹一次吃完，轻者一副，重者二副，内痔、外痔、混合痔都有效。
+
+        空心菜治外痔
+
+        取空心菜2000克洗净,切碎，捣汁。菜汁放入锅中用旺火烧开，后以温火煎煮浓缩，到煎液较稠厚时加入蜂蜜250克,再煎至稠粘如蜜时停火，待冷却后装瓶备用。每次1汤匙,以沸水冲化后饮用，每日2次。 空心菜味甘、性寒。有清热凉血、利小便、解毒之功能。
+
+        土豆片能治痔疮
+
+        其方法：晚上睡觉前治疗为好，将土豆洗净后切3-5片薄薄的片，摞在一起敷贴在痔疮上，盖一层纱布用胶布条固定好，次日早取下，土豆片呈干褐状，连续治两三天即可痊愈。
+
+        大萝卜治痔疮
+
+        大萝卜切成厚片，用水煮烂后将萝卜捞出，趁热熏洗患处，煮一次水可用5天，用前加热即可，5天一疗程，大约4疗程可去根。
+
+        鸡蛋黄可治痔疮
+
+        得痔疮的人，非常痛苦。方法如下：取红皮鸡蛋两个(最好是农村非鸡场养的鸡蛋)煮熟后吃掉蛋白，留下蛋黄掰碎在干锅里烧烤，直到蛋黄全部化为黑油后，装如干净小瓶内备用。痔疮犯时，每日可用棉签蘸蛋黄油涂抹肛门三次，连续将蛋黄油用完为止。一般两个蛋黄就可把痔疮治愈，严重者4个蛋黄即可
+
+        枸杞子根枝治痔疮
+
+        内外痔疮很严重，发病时痒痛难忍，怕解大便，想动手术又下不了决心，用枸杞子根枝煮水熏泡，一个礼拜便治好了。
+
+        方法：先把枸杞子根上的泥土洗净，将根枝断成小节(鲜干根枝都可以)，放入砂锅煮20分钟即可。先熏患处，等水温能洗时泡洗5-10分钟。用过的水可留下次加热再用。
+    </p>
 </div>
-<script>
-  document.addEventListener("WeixinJSBridgeReady", function () {
-    $('.audio')[0].play();
-  }, false);
-</script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({
