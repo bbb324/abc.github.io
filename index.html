@@ -1,11 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title></title>
     <meta charset="UTF-8">
-    <title>Test github application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+    <script type="text/javascript" src="js/autofill.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-<h1>hello world</h1>
-<h2>how r u</h2>
+<div id="fullpage">
+    <audio class="audio" autoplay="true" loop="loop" src="audio/1.Mp3"></audio>
+    <div class="section">
+        <div class="head"></div>
+        <div class="p1">
+            <img class="music" src="image/music.png">
+            <img class="word" src="image/p1_word.png">
+            <img class="scroll" src="image/scroll.png">
+        </div>
+    </div>
+    <div class="section">
+        <div class="head"></div>
+        <div class="p2">
+            <img class="music" src="image/music.png">
+            <img class="p2_word" src="image/p2_word.png">
+            <img class="scroll" src="image/scroll.png">
+            <img class="portrait" src="image/portrait.png">
+            <div class="lineDiv">
+              <img class="line" src="image/line.png">
+              <img class="line brightP3" src="image/bright_line.png">
+              <img class="square SP2" src="image/square.png">
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="head"></div>
+        <div class="p3">
+            <img class="music" src="image/music.png">
+            <img class="p3_1" src="image/p3_1.png">
+            <div class="p3_2">
+                <div class='p3_2_bg'>
+                    <div id='p3_2' class="p3_2_txt">
+                       <div class="dialog-speak-manager">
+                            <span>Gavin:</span><br />
+                            <span id="p3_2_speak"></span>
+                       </div>
+                    </div>
+                    <img class="manager" src="image/mang.png">
+                </div>
+            </div>
+            <div class="p3_3">
+                <div class='p3_3_bg'>
+                    <img class="avator-fd" src="image/avatar-fd.png">
+                    <div id='p3_3' class="p3_3_txt">
+                        <div class="dialog-speak-manager">
+                            <span>林先生:</span><br />
+                            <span id="p3_3_speak"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p3_4">
+                <div class='p3_4_bg'>
+                    <div id='p3_4' class="p3_4_txt">
+                        <div class="dialog-speak-manager">
+                            <span>Gavin:</span><br />
+                            <span id="p3_4_speak"></span>
+                        </div>
+                    </div>
+                    <img class="manager" src="image/mang.png">
+                </div>
+            </div>
+            <img class="p3_5" src="image/p3_5.png">
+            <img class="p3_6" src="image/p3_6.png">
+            <img class="scroll" src="image/scroll.png">
+            <img class="portrait" src="image/portrait.png">
+            <div class="lineDiv">
+                <img class="line" src="image/line.png">
+                <img class="line brightP3" src="image/bright_line.png">
+                <img class="square SP3" src="image/square.png">
+            </div>
+        </div>
+        <div class="p4">
+            <img class="p4_exit" src="image/p4_exit.png">
+            <img class="p4_1" src="image/p4_1.png">
+        </div>
+    </div>
+    <div class="section">
+        <div class="head"></div>
+        <div class="p5">
+            <img class="p5_bg1" src="image/p5_bg1.png">
+            <img class="p5_bg2" src="image/p5_bg2.png">
+            <img class="music" src="image/music.png">
+            <img class="p5_1" src="image/p5_1.png">
+            <img class="p5_2" src="image/p5_2.png">
+            <img class="scroll" src="image/scroll.png">
+            <img class="portrait" src="image/portrait.png">
+          <div class="lineDiv">
+            <img class="line" src="image/line.png">
+            <img class="line brightP5" src="image/bright_line.png">
+            <img class="square SP5" src="image/square.png">
+          </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="head"></div>
+        <div class="p6">
+            <img class="p6_bg1" src="image/p6_bg1.png">
+            <img class="p6_bg2" src="image/p6_bg2.png">
+            <img class="music" src="image/music.png">
+            <img class="p6_1" src="image/p6_1.png">
+            <img class="p6_2" src="image/p6_2.png">
+            <img class="scroll" src="image/scroll.png">
+            <img class="portrait" src="image/portrait.png">
+          <div class="lineDiv">
+            <img class="line" src="image/line.png">
+            <img class="line brightP6" src="image/bright_line.png">
+            <img class="square SP6" src="image/square.png">
+          </div>
+            <img class="p6_3" src="image/p6_3.png">
+        </div>
+    </div>
+    <div class="section">
+        <div class="head"></div>
+        <div class="p7">
+            <img class="p7_bg1" src="image/p7_bg1.png">
+            <img class="p7_bg2" src="image/p7_bg2.png">
+            <img class="music" src="image/music.png">
+            <img class="p7_1" src="image/p7_1.png">
+            <div class="p7_2">
+                <div class='p7_2_bg'>
+                    <div id='p7_2' class="p7_2_txt">
+                       <div class="dialog-speak-manager">
+                            <span>Julie:</span><br />
+                            <span id="p7_2_speak"></span>
+                       </div>
+                    </div>
+                    <img class="manager" src="image/p7_mang.png">
+                </div>
+            </div>
+            <div class="p7_3">
+                <div class='p7_3_bg'>
+                    <img class="avator-fd" src="image/p7_avatar-fd.png">
+                    <div id='p7_3' class="p7_3_txt">
+                        <div class="dialog-speak-manager">
+                            <span>林先生:</span><br />
+                            <span id="p7_3_speak"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p7_4">
+                <div class='p7_4_bg'>
+                    <div id='p7_4' class="p7_4_txt">
+                        <div class="dialog-speak-manager">
+                            <span>Julie:</span><br />
+                            <span id="p7_4_speak"></span>
+                        </div>
+                    </div>
+                    <img class="manager" src="image/p7_mang.png">
+                </div>
+            </div>
+
+            <img class="scroll" src="image/scroll.png">
+            <img class="portrait" src="image/portrait.png">
+          <div class="lineDiv">
+            <img class="line" src="image/line.png">
+            <img class="line brightP7" src="image/bright_line.png">
+            <img class="square SP7" src="image/square.png">
+          </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="head"></div>
+        <div class="p8">
+            <img class="p8_bg1" src="image/p8_bg1.png">
+            <img class="p8_bg2" src="image/p8_bg2.png">
+            <img class="music" src="image/music.png">
+            <img class="p8_1" src="image/p8_1.png">
+            <img class="p8_2" src="image/p8_2.png">
+            <img class="scroll" src="image/scroll.png">
+            <img class="portrait" src="image/portrait.png">
+          <div class="lineDiv">
+            <img class="line" src="image/line.png">
+            <img class="line brightP8" src="image/bright_line.png">
+            <img class="square SP8" src="image/square.png">
+          </div>
+            <img class="p8_3" src="image/p8_3.png">
+        </div>    </div>
+    <div class="section">
+        <div class="head"></div>
+        <div class="p9">
+            <img class="music" src="image/music.png">
+            <img class="p9_1" src="image/p9_1.png">
+            <img class="p9_2" src="image/p9_2.png">
+            <img class="scroll" src="image/scroll.png">
+            <img class="portrait" src="image/portrait.png">
+          <div class="lineDiv">
+            <img class="line" src="image/line.png">
+            <img class="line brightP9" src="image/bright_line.png">
+            <img class="square SP9" src="image/square.png">
+          </div>
+            <img class="p9_3" src="image/p9_3.png">
+        </div>
+    </div>
+    <div class="section">
+        <div class="head"></div>
+        <div class="p10">
+            <img class="music" src="image/music.png">
+            <img class="p10_1" src="image/p10_1.png">
+            <img class="scroll" src="image/scroll.png">
+        </div>
+    </div>
+    <div class="section">
+        <div class="head"></div>
+        <div class="p11">
+            <img class="music" src="image/music.png">
+            <img class="p11_1" src="image/p10_2.png">
+            <img class="scroll" src="image/scroll.png">
+        </div>
+    </div>
+</div>
+<script>
+  document.addEventListener("WeixinJSBridgeReady", function () {
+    $('.audio')[0].play();
+  }, false);
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1536231972479474",
+        enable_page_level_ads: true
+    });
+</script>
 </body>
 </html>
