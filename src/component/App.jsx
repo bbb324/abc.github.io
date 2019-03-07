@@ -4,6 +4,7 @@
 import React from 'react';
 import ArticleList from './ArticleList';
 import ArticleContent from './ArticleContent';
+import WhoAmI from './WhoAmI';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class App extends React.Component {
 
@@ -12,7 +13,7 @@ class App extends React.Component {
             <div>
                 <ul>
                     <li>
-                        <Link to="/">home</Link>
+                        <Link to="/whoami">whoami</Link>
                     </li>
                     <li>
                         <Link to="/list">ArticleList</Link>
@@ -24,6 +25,7 @@ class App extends React.Component {
                 </ul>
 
                 <hr />
+                <Route path="/whoami" component={WhoAmI} />
                 <Route path="/list" component={ArticleList} />
                 <Route path="/content" component={ArticleContent} />
             </div>
