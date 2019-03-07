@@ -2,12 +2,39 @@
  * Created by junxie on 18/5/27.
  */
 import React from 'react';
-
+import ArticleList from './ArticleList';
+import ArticleContent from './ArticleContent';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class App extends React.Component {
+
     render() {
-        console.log(123)
-        return <div>23</div>;
+        return <Router>
+            <div>
+                <ul>
+                    <li>
+                        <Link to="/">home</Link>
+                    </li>
+                    <li>
+                        <Link to="/list">ArticleList</Link>
+                    </li>
+                    <li>
+                        <Link to="/content">ArticleContent</Link>
+                    </li>
+
+                </ul>
+
+                <hr />
+                <Route path="/list" component={ArticleList} />
+                <Route path="/content" component={ArticleContent} />
+            </div>
+        </Router>;
     }
+    /*render() {
+        return <div>
+            <ArticleContent/>
+            <ArticleList/>
+        </div>
+    }*/
 }
 
 export default App;

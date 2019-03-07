@@ -19,7 +19,9 @@
   "homepage": "https://github.com/bbb324/abc.github.io#readme",
   "dependencies": {
     "react": "16.x",
-    "react-dom": "16.x"
+    "react-dom": "16.x",
+    "react-md-file": "^2.0.0",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
