@@ -19,7 +19,7 @@ class App extends React.Component {
                         <Link to="/list">ArticleList</Link>
                     </li>
                     <li>
-                        <Link to="/content">ArticleContent</Link>
+                        <Link to="/content/1">ArticleContent</Link>
                     </li>
 
                 </ul>
@@ -27,7 +27,7 @@ class App extends React.Component {
                 <hr />
                 <Route path="/whoami" component={WhoAmI} />
                 <Route path="/list" component={ArticleList} />
-                <Route path="/content" component={ArticleContent} />
+                <Route path="/content/:id" component={ArticleContent} />
             </div>
         </Router>;
     }

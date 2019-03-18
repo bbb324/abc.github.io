@@ -1,21 +1,30 @@
 import React, {Component} from 'react';
-
+import { withRouter } from 'react-router-dom'
+import data from '../articles/map';
 class ArticleList extends Component {
 
     constructor(props, context) {
 
         super(props, context);
         this.state = {};
-
     }
 
-    componentDidMount() {
+    jump(sequence) {
+        this.props.history.push(`/content/${sequence}`)
+    }
 
+    getTitle() {
+        return data.map((item, sequence) => {
+            return <li onClick={this.jump.bind(this, sequence)}>{item.title}</li>
+        });
     }
 
     render() {
         return (<div>
             这里是标题列表
+            <ul>
+                {this.getTitle()}
+            </ul>
         </div>);
     }
 }
