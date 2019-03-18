@@ -20,9 +20,9 @@ class ArticleList extends Component {
     }
 
     render() {
-        return (<div>
-            这里是标题列表
-            <ul>
+        return (<div className={'content'}>
+            <h1>文章列表</h1>
+            <ul className={'article-title'}>
                 {this.getTitle()}
             </ul>
         </div>);
