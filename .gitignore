@@ -3,3 +3,4 @@ node_modules/
 build/*.hot-update.json
 build/*.hot-update.js
 build/index.html
+.vscode

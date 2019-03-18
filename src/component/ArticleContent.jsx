@@ -15,7 +15,7 @@ class ArticleContent extends Component {
     }
 
     render() {
-        return <ReactMd fileName={'src/article-1.md'} />;
+        return <ReactMd fileName={'blog.github.io/src/article-1.md'} />;
     }
 }
 
