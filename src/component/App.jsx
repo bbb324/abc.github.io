@@ -13,7 +13,7 @@ class App extends React.Component {
             <div>
                 <ul>
                     <li>
-                        <Link to="/whoami">whoami_</Link>
+                        <Link to="/whoami">whoami_1</Link>
                     </li>
                     <li>
                         <Link to="/list">ArticleList</Link>
