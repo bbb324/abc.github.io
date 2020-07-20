@@ -46,12 +46,12 @@ const autoCi = async () => {
 
 const App = () => {
     useEffect(() => {
-        console.log(2);
+        console.log(4);
         fetchArticle();
     }, []);
 
     return <div>
-        <Button onClick={() => autoCi()}>上传</Button>
+        <Button onClick={() => autoCi()}>上传11</Button>
 
         <Router>
             <div>

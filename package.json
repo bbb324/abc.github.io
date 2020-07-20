@@ -4,7 +4,8 @@
   "description": "哇咔咔",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js --progress --display-modules --colors --watch --hot",
+    "dev": "webpack --config webpack.config.basic.js --progress --display-modules --colors --watch --hot",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,11 +34,12 @@
     "@babel/preset-es2015": "^7.0.0-beta.53",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-0": "^7.0.0",
+    "axios": "^0.19.2",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
-    "babel-polyfill": "6.26.0",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-react-transform": "^3.0.0",
+    "babel-polyfill": "6.26.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.13.0",
     "eslint-friendly-formatter": "^4.0.1",
@@ -46,10 +48,11 @@
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.1.2",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
-    "axios": "^0.19.2"
+    "webpack-merge": "^5.0.9"
   }
 }
