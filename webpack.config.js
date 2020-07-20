@@ -6,11 +6,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
-    entry: './src/index.jsx',
+    entry: ['babel-polyfill', './src/index.jsx'],
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js'
     },
+    devtool: 'source-map',
     optimization: {
         minimizer: [
             // we specify a custom UglifyJsPlugin here to get source maps in production

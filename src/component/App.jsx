@@ -1,15 +1,56 @@
 /**
  * Created by junxie on 18/5/27.
  */
-import React from 'react';
+import React, { useEffect } from 'react';
 import ArticleList from './ArticleList';
 import ArticleContent from './ArticleContent';
 import WhoAmI from './WhoAmI';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-class App extends React.Component {
+import axios from './axios';
+import { Button } from 'antd';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-    render() {
-        return <Router>
+const getCookie = (name) => {
+    var arr,reg=new RegExp('(^| )'+name+'=([^;]*)(;|$)');
+    if(arr=document.cookie.match(reg))
+        return unescape(arr[2]);
+    else
+        return null;
+};
+
+const fetchArticle = async () => {
+    
+    const res = await axios('GET', 'queryArticleList.json');
+
+    
+    console.log(res);
+};
+
+const addArticle = async () => {
+    
+    const res = await axios('POST', 'addArticle.json', {
+        data: JSON.stringify({name: '第一篇文字', size: 100})
+    });
+    console.log(res);
+};
+
+const autoCi = async () => {
+    
+    const res = await axios('POST', 'updateRepo.json');
+    console.log(res);
+};
+
+
+const App = () => {
+    useEffect(() => {
+        
+        fetchArticle();
+        autoCi();
+    }, []);
+
+    return <div>
+        <Button onClick={() => addArticle()}>上传</Button>
+
+        <Router>
             <div>
                 <ul>
                     <li>
@@ -30,13 +71,8 @@ class App extends React.Component {
                 <Route path="/content/:id" component={ArticleContent} />
             </div>
         </Router>;
-    }
-    /*render() {
-        return <div>
-            <ArticleContent/>
-            <ArticleList/>
-        </div>
-    }*/
-}
+    </div>;
+};
 
 export default App;
+
