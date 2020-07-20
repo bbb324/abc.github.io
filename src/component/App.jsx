@@ -46,7 +46,7 @@ const autoCi = async () => {
 
 const App = () => {
     useEffect(() => {
-        console.log(9);
+        console.log(10);
         fetchArticle();
     }, []);
 
