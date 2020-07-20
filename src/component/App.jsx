@@ -35,7 +35,10 @@ const addArticle = async () => {
 
 const autoCi = async () => {
     
-    const res = await axios('POST', 'updateRepo.json');
+    const res = await axios('POST', 'updateRepo.json', {
+        repoLocation: '/root/www/',
+        repoName: 'bbb324.github.io',
+    });
     console.log(res);
 };
 
@@ -44,7 +47,7 @@ const App = () => {
     useEffect(() => {
         
         fetchArticle();
-        autoCi();
+        //autoCi();
     }, []);
 
     return <div>
