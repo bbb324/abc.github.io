@@ -18,15 +18,15 @@ const getCookie = (name) => {
 };
 
 const fetchArticle = async () => {
-    
+
     const res = await axios('GET', 'queryArticleList.json');
 
-    
+
     console.log(res);
 };
 
 const addArticle = async () => {
-    
+
     const res = await axios('POST', 'addArticle.json', {
         data: JSON.stringify({name: '第一篇文字', size: 100})
     });
@@ -34,8 +34,8 @@ const addArticle = async () => {
 };
 
 const autoCi = async () => {
-    
-    const res = await axios('POST', 'updateRepo.json', {
+
+    const res = await axios('POST', 'updateBrowserRepo.json', {
         repoLocation: '/root/www',
         //repoLocation: '/Users/junxie/Documents/test',
         repoName: 'bbb324.github.io',
@@ -46,7 +46,7 @@ const autoCi = async () => {
 
 const App = () => {
     useEffect(() => {
-        console.log(4);
+        console.log(1);
         fetchArticle();
     }, []);
 
