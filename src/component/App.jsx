@@ -36,7 +36,8 @@ const addArticle = async () => {
 const autoCi = async () => {
     
     const res = await axios('POST', 'updateRepo.json', {
-        repoLocation: '/root/www/',
+        repoLocation: '/root/www',
+        //repoLocation: '/Users/junxie/Documents/test',
         repoName: 'bbb324.github.io',
     });
     console.log(res);
@@ -45,13 +46,12 @@ const autoCi = async () => {
 
 const App = () => {
     useEffect(() => {
-        
+        console.log(2);
         fetchArticle();
-        //autoCi();
     }, []);
 
     return <div>
-        <Button onClick={() => addArticle()}>上传</Button>
+        <Button onClick={() => autoCi()}>上传</Button>
 
         <Router>
             <div>
