@@ -4,8 +4,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from '../common/axios';
 import ArticleContent from './ArticleContent';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
+import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import Header from './Header';
 const fetchArticleList = async (setBlogList) => {
     const res = await axios.get('blogList.json');
     setBlogList(res.data);
@@ -18,7 +18,9 @@ const urlDecorator = (item) => {
 
 const renderTitle = (list) => {
     return list.map(item => {
-        return <Link to={urlDecorator(item)} >{item}</Link>;
+        return <div className={'title-area'}>
+            <Link to={urlDecorator(item)} className={'title'}>{item}</Link>
+        </div>;
     });
 };
 
@@ -34,18 +36,26 @@ const App = () => {
     useEffect(() => {
         fetchArticleList(setBlogList);
     }, []);
-    
-    return <Router>
-        <div>
-            <ul>
-                {renderTitle(blogList)} 
-            </ul>
+    if(blogList.length === 0) return null;
+    return <div>
+        <Header />
+        <Router>
+            <div className={'article-body'}>
+                <ul className={'article-index'}>
+                    <li key='index' className={'article-category'}>目录</li>
+                    {renderTitle(blogList)} 
+                </ul>
 
-            <hr />
-            {renderContent(blogList)}
-            
-        </div>
-    </Router>;
+                <div className={'article-content'}>
+                    {renderContent(blogList)}
+                    <Route path="/" render={() => (
+                        <Redirect to={urlDecorator(blogList[0])}/>
+                    )}/>
+                </div>
+                
+            </div>
+        </Router>
+    </div>;
 };
 
 export default App;
