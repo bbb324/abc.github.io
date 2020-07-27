@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from '../common/axios';
-var Markdown = require('react-remarkable');
 
 const fetchArticle = async (fileName, setContent) => {
     const res = await axios.get(`/blogContent.json?fileName=${fileName}`);
