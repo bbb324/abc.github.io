@@ -1,80 +1,51 @@
 /**
  * Created by junxie on 18/5/27.
  */
-import React, { useEffect } from 'react';
-import ArticleList from './ArticleList';
+import React, { useEffect, useState } from 'react';
+import axios from '../common/axios';
 import ArticleContent from './ArticleContent';
-import WhoAmI from './WhoAmI';
-import axios from './axios';
-import { Button } from 'antd';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-const getCookie = (name) => {
-    var arr,reg=new RegExp('(^| )'+name+'=([^;]*)(;|$)');
-    if(arr=document.cookie.match(reg))
-        return unescape(arr[2]);
-    else
-        return null;
+const fetchArticleList = async (setBlogList) => {
+    const res = await axios.get('blogList.json');
+    setBlogList(res.data);
 };
 
-const fetchArticle = async () => {
-
-    const res = await axios('GET', 'queryArticleList.json');
-
-
-    console.log(res);
+const urlDecorator = (item) => {
+    let name = item.split('.')[0];
+    return `/blog.htm/${name}`;
 };
 
-const addArticle = async () => {
-
-    const res = await axios('POST', 'addArticle.json', {
-        data: JSON.stringify({name: '第一篇文字', size: 100})
+const renderTitle = (list) => {
+    return list.map(item => {
+        return <Link to={urlDecorator(item)} >{item}</Link>;
     });
-    console.log(res);
 };
 
-const autoCi = async () => {
-
-    const res = await axios('POST', 'updateBrowserRepo.json', {
-        repoLocation: '/root/www',
-        //repoLocation: '/Users/junxie/Documents/test',
-        repoName: 'bbb324.github.io',
+const renderContent = (list) => {
+    return list.map(item => {
+        return <Route path={urlDecorator(item)} 
+            component={() => ArticleContent({title: item})} />;
     });
-    console.log(res);
 };
-
 
 const App = () => {
+    const [blogList, setBlogList] = useState([]);
     useEffect(() => {
-        console.log(10);
-        //fetchArticle();
+        fetchArticleList(setBlogList);
     }, []);
+    
+    return <Router>
+        <div>
+            <ul>
+                {renderTitle(blogList)} 
+            </ul>
 
-    return <div>
-        <Button onClick={() => autoCi()}>上传11</Button>
-
-        <Router>
-            <div>
-                <ul>
-                    <li>
-                        <Link to="/whoami">whoami_1</Link>
-                    </li>
-                    <li>
-                        <Link to="/list">ArticleList</Link>
-                    </li>
-                    <li>
-                        <Link to="/content/1">ArticleContent</Link>
-                    </li>
-
-                </ul>
-
-                <hr />
-                <Route path="/whoami" component={WhoAmI} />
-                <Route path="/list" component={ArticleList} />
-                <Route path="/content/:id" component={ArticleContent} />
-            </div>
-        </Router>;
-    </div>;
+            <hr />
+            {renderContent(blogList)}
+            
+        </div>
+    </Router>;
 };
 
 export default App;
