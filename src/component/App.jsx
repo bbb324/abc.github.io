@@ -33,6 +33,7 @@ const renderContent = (list) => {
 
 const App = () => {
     const [blogList, setBlogList] = useState([]);
+    console.log(1);
     useEffect(() => {
         fetchArticleList(setBlogList);
     }, []);
