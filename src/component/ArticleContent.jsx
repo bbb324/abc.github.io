@@ -23,7 +23,7 @@ const ArticleContent = (props) => {
     
     return <div>
         <div
-          className="content"
+          className="content markdown-body"
           dangerouslySetInnerHTML={getRawMarkup(content)} />
           </div>
 };

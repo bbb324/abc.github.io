@@ -33,11 +33,12 @@ const renderContent = (list) => {
 
 const App = () => {
     const [blogList, setBlogList] = useState([]);
-    console.log(33);
     useEffect(() => {
         fetchArticleList(setBlogList);
     }, []);
     if(blogList.length === 0) return null;
+    console.log(22);
+    
     return <div>
         <Header />
         <Router>

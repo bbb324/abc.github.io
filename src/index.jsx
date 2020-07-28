@@ -4,7 +4,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import App from './component/App';
-import './default.less'
+import './default.less';
+import './markdown-style.less';
 import './style.less';
 ReactDom.render(<App />,
     document.getElementById('app')
