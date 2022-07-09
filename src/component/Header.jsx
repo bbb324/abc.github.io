@@ -7,7 +7,7 @@ import './header.less';
 const Header = () => useMemo(() => {
     return <div className={'header'}>
         <span>John's Site</span>
-    </div>
+    </div>;
 }, []);
 
 export default Header;

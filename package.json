@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "webpack --config webpack.config.basic.js --progress --display-modules --colors --watch --hot",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js --ext .jsx src",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",

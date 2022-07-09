@@ -10,7 +10,7 @@ const fetchArticle = async (fileName, setContent) => {
 const getRawMarkup = (content) => {
     var md = new Remarkable();
     return { __html: md.render(content) };
-  }
+};
 
 
 const ArticleContent = (props) => {
@@ -23,9 +23,9 @@ const ArticleContent = (props) => {
     
     return <div>
         <div
-          className="content markdown-body"
-          dangerouslySetInnerHTML={getRawMarkup(content)} />
-          </div>
+            className="content markdown-body"
+            dangerouslySetInnerHTML={getRawMarkup(content)} />
+    </div>;
 };
 
 export default ArticleContent;
