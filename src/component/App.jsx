@@ -37,7 +37,6 @@ const App = () => {
         fetchArticleList(setBlogList);
     }, []);
     if(blogList.length === 0) return null;
-    console.log(22);
     
     return <div>
         <Header />
