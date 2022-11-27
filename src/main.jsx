@@ -5,7 +5,7 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
-import "./index.css";
+import "./index.less";
 
 import Home from "./routes/Home";
 import About from './routes/About';
