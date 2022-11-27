@@ -26,13 +26,19 @@ jobs:
       #       ${{ runner.os }}-yarn-
       - run: npm install && npm run build
   Deploy:
-    - name: deploy
-      uses: JamesIves/github-pages-deploy-action@v4.2.3
-      width:
-        branch: io
-        folder: dist
-        clean: true
-        clean-exclude: |
-          special-file.txt
-          some/*.txt
-        ssh-key: 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
+    needs: Build # 确保build 阶段完成
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+      - name: download build files
+        uses: actions/download-artifact@v2
+        with:
+          name: build-pages
+          path: build
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: io
+          folder: dist
+          token: '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'
