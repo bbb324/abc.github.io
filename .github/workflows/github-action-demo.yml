@@ -17,13 +17,6 @@ jobs:
       - name: npm run build
         run: npm run build
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.5.9
-        with:
-          ACCESS_TOKEN: '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'
-          BRANCH: io
-          folder: dist
-
         # with:
         #   name: build-pages
         #   path: build
