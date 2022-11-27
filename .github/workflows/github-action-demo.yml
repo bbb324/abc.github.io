@@ -22,7 +22,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist # The folder the action should deploy.
-          token: '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'
+          token: 'aoisdAOUW'
 
         # with:
         #   name: build-pages
