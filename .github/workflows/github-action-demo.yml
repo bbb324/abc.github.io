@@ -8,12 +8,14 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+
       - name: Setup Node 16.x
         uses: actions/checkout@v3
         with:
-          node-version: 16.x
-          cache: npm
+          token: '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'
       - run: npm install && npm run build
+      path: my-tools
 
         # with:
         #   name: build-pages
