@@ -19,6 +19,7 @@ git init
 git checkout -B io
 git add -A
 git commit -m 'deploy'
+git push -f git@github.com:bbb324/bbb324.github.io.git
 
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
