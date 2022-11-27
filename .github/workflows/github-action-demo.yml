@@ -11,7 +11,9 @@ jobs:
     strategy:
       matrix:
         node-verision: [16.x]
+
     steps:
+      - uses: actions/checkout@v3
       - name: Setup Node 16.x
         uses: actions/checkout@v3
         with:
