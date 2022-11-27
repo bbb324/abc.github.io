@@ -6,3 +6,4 @@ build/*.hot-update.js.map
 build/index.html
 dist/
 .vscode
+.DS_Store
