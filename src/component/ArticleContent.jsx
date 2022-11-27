@@ -18,7 +18,7 @@ const ArticleContent = (props) => {
     
     
     useEffect(() => {
-        fetchArticle(props.title, setContent);
+        //fetchArticle(props.title, setContent);
     }, []);
     
     return <div>

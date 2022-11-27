@@ -34,7 +34,7 @@ const renderContent = (list) => {
 const App = () => {
     const [blogList, setBlogList] = useState([]);
     useEffect(() => {
-        fetchArticleList(setBlogList);
+        //fetchArticleList(setBlogList);
     }, []);
     if(blogList.length === 0) return null;
     
