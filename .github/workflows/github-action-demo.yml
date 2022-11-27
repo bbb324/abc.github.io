@@ -1,25 +1,28 @@
-name: bbb324.github.io deploy
-run-name: bbb324 is testing out GitHub Actions 🚀
+name: Build and Deploy
 on:
   push:
-    branckes:
+    branches:
       - io
+permissions:
+  contents: write
 jobs:
-  Build:
-    runs-on: ununtu-latest
-
+  build-and-deploy:
+    # concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: npm install and build
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
-          npm insatll
+          npm ci
           npm run build
-      - name: Deploy
+
+      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: /dist
+          folder: dist # The folder the action should deploy.
+          token: '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'
 
         # with:
         #   name: build-pages
