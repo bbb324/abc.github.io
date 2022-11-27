@@ -8,17 +8,12 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code
+      - name: Setup Node 16.x
         uses: actions/checkout@v3
         with:
-          node-version: 16.14
+          node-version: 16.x
+          cache: npm
       - run: npm install && npm run build
-  Deploy:
-    needs: Build # 确保build 阶段完成
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install Dependencies
-        run: npm run build
 
         # with:
         #   name: build-pages
