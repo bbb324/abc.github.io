@@ -11,7 +11,7 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v3
         with:
-          node-version: 16.14
+          node: 16.14
       - run: npm install && npm run build
   Deploy:
     needs: Build # 确保build 阶段完成
