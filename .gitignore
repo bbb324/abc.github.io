@@ -4,4 +4,5 @@ build/*.hot-update.json
 build/*.hot-update.js
 build/*.hot-update.js.map
 build/index.html
+dist/
 .vscode
