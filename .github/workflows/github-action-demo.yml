@@ -12,16 +12,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           node-version: 16.14
-      # - name: yarn cache
-      #   id: yarn-cahce-dir-path
-      #   run: echo "::set-output name=dir::$(yarn cache dir)"
-      # - uses: actions/cache@v2
-      #   id: yarn-cache
-      #   with:
-      #     path: ${{ steps.yarn-cahce-dir-path.outputs.dir }}
-      #     key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-yarn-
       - run: npm install && npm run build
   Deploy:
     needs: Build # 确保build 阶段完成
@@ -29,12 +19,15 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v3
-        with:
-          name: build-pages
-          path: build
-      - name: deploy
-        uses: JamesIves/github-pages-deploy-action@v4.2.3
-        with:
-          branch: io
-          folder: dist
-          token: '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'
+      - name: Install Dependencies
+        run: npm run build
+
+        # with:
+        #   name: build-pages
+        #   path: build
+      # - name: deploy
+      #   uses: JamesIves/github-pages-deploy-action@v4.2.3
+      #   with:
+      #     branch: io
+      #     folder: dist
+      #     token: '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'
