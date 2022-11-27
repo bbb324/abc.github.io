@@ -10,10 +10,8 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v3
-      - name: actions/setup-node@v3
-        uses: actions/setup-node@v3
         with:
-          node: 16.14
+          node-version: 16.14
       # - name: yarn cache
       #   id: yarn-cahce-dir-path
       #   run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -31,8 +29,6 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v3
-      - name: download build files
-        uses: actions/download-artifact@v3
         with:
           name: build-pages
           path: build
