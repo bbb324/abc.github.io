@@ -6,20 +6,23 @@ on:
       - io
 jobs:
   Build:
-    runs-on: self-hosted
-
-    strategy:
-      matrix:
-        node-verision: [16.x]
+    runs-on: ununtu-latest
 
     steps:
+      - name: Checkout
       - uses: actions/checkout@v3
-      - name: Setup Node 16.x
-        uses: actions/checkout@v3
+
+      - name: npm install
+        run: npm install
+      - name: npm run build
+        run: npm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.5.9
         with:
-          token: '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'
-      - run: npm install && npm run build
-      path: my-tools
+          ACCESS_TOKEN: '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'
+          BRANCH: io
+          folder: dist
 
         # with:
         #   name: build-pages
