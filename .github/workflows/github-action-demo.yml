@@ -17,7 +17,8 @@ jobs:
         run: |
           npm ci
           npm run build
-        folder: dist
+        with:
+          folder: dist
 
         #  folder: dist # The folder the action should deploy.
 
