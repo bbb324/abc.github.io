@@ -19,9 +19,12 @@ jobs:
 
       - name: build
         run: npm run build
-      - name: replace
+
+      - name: deploy
+        use: peaceiris/actions-gh-pages@v3
         with:
-          directory: /dist
+          token: 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
+          publish_dir: ./dist
 
         #  folder: dist # The folder the action should deploy.
 
