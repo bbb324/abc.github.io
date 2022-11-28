@@ -17,12 +17,9 @@ jobs:
         run: |
           npm ci
           npm run build
+        folder: dist
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist # The folder the action should deploy.
-          token: 'aoisdAOUW'
+        #  folder: dist # The folder the action should deploy.
 
         # with:
         #   name: build-pages
