@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 
-import "./index.less";
+import "./default.less";
 
 import Home from "./routes/Home";
 import About from './routes/About';
