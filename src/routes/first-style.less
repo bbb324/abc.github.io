@@ -1,0 +1,52 @@
+.first-sceen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+
+    .first-txt {
+        display: inline-block;
+        font-size: 1.5rem;
+        position: relative;
+        bottom: 18px;
+        p {
+            margin: 0.5rem 0;
+        }
+        .name {
+            font-size: 3.75rem;
+        }
+
+    }
+    .first-img {
+        display: inline-block;
+        img {
+            width: 22rem;
+            height: auto;
+        }
+    }
+}
+.click-area {
+    .clik-size {
+        width: 160px;
+        height: 56px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover {
+            transition: transform 0.3s ease;
+            transform: translateY(-10px);
+        }
+    }
+    .get-email {
+        background-color: rgba(83, 152, 190);
+    }
+    .get-resume {
+        margin-left: 2rem;
+        background-color: rgba(226, 109, 90);
+    }
+}

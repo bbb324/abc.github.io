@@ -1,6 +1,10 @@
+#root {
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
 .header {
     width: 100vw;
     height: 5rem;
+    padding: 0 2rem;
     background-color: rgba(196, 220, 233);
     display: flex;
     align-items: center;
@@ -8,6 +12,7 @@
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
     position: fixed;
     top: 0;
+    z-index: 2;
     img {
         margin-left: 27px;
         height: 3rem;
@@ -32,7 +37,9 @@
 }
 
 .content {
-    width: 100vw;
+    z-index: 1;  
+    width: calc(100vw - 8.5rem);
+    padding-top: 100px;
+    margin: 80px auto 0 auto;
     height: 120vh;
-    background-color: #e5e7eb;
 }
