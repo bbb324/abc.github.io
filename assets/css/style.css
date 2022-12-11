@@ -1255,7 +1255,9 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #PORTFOLIO, BLOG 
    */
 
-  .project-img,
+  .project-img {
+    height: 184px;
+  }
   .blog-banner-box { height: auto; }
 
 }
