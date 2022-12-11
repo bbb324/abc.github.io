@@ -2,17 +2,17 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
+alt = Jun Xie
+Jun Xie
 Web developer
 
 Show Contacts
 
 Email
-richard@example.com
+johnigzie@163.com
 
 Phone
-+1 (213) 352-2795
++86 18148578741
 
 Birthday
 June 23, 1982
